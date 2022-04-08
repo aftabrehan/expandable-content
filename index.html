@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Content</title>
+    <style>
+        #expand {
+            background-color: #262626;
+            color: white;
+        }
+        #content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #eee;
+            transition: .5s;
+        }
+        #content.active {
+            max-height: 300px;
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="expand">Expand Content</h2>
+    <p id="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id unde tempore libero aliquid distinctio eaque ab laudantium quae deserunt quaerat qui in aperiam quasi asperiores sint, rem eum ratione fuga. Doloremque alias nemo, debitis reprehenderit consequatur quo quaerat ab voluptate eligendi fugiat harum est unde optio. Perspiciatis perferendis quod dolore saepe esse nulla inventore blanditiis eos nostrum sequi, nemo sapiente et ratione odio dolores dolorum aperiam, voluptatem commodi repellendus tempore neque temporibus rem at doloribus. Earum, incidunt nisi? Eos omnis praesentium eligendi optio sequi ullam? Impedit a minus beatae corporis quasi ab facilis voluptatum. Veniam velit nemo fugiat corrupti commodi.</p>
+    <script>
+        const expand = document.getElementById('expand')
+        const content = document.getElementById('content')
+        expand.addEventListener('click', () => {
+
+            content.classList.toggle('active')
+
+        })
+    </script>
+</body>
+</html>
